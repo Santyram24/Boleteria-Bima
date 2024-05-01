@@ -38,10 +38,20 @@ function btnx10() {
 
 }
 
-//con este metodo que le agregamos al boton comprar se abre una nueva ventana donde el valor se almacena localmente al menos se podra hacer con base de datos mas adelante 
+
 function comprarBoleta() {
-  if (presio !== null) {
-    const nuevaVentana = window.open('', 'Compra', 'width=400,height=300');
-    nuevaVentana.document.write(`<p>Valor de la boleta: ${presio}</p>`);
+	if (presio !== null) {
+	  const contenedorFormulario = document.getElementById('contenedorFormulario');
+	  const presioForm = document.getElementById('valorBoletaForm');
+	  
+	  presioForm.value = presio;
+	  contenedorFormulario.style.display = 'block';
+	}
   }
-}
+  
+  const cerrarFormulario = document.querySelector('.cerrar-formulario');
+
+  cerrarFormulario.addEventListener('click', () => {
+	const formulario = document.querySelector('.contenedor-formulario');
+	formulario.style.display = 'none';
+  });

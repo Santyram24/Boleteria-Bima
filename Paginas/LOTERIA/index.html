@@ -24,7 +24,18 @@
 		<button onclick="comprarBoleta()" id="comprar-btn" class="btncompra">Comprar</button>
 	</content>	
 </div>
-
+<div id="contenedorFormulario" class="contenedor-formulario" style="display: none;">
+	<form id="formulario" class="formulario">
+	  <label for="nombre">Nombre:</label>
+	  <input type="text" id="nombre" name="nombre" required><br><br>
+	  <label for="email">Email:</label>
+	  <input type="email" id="email" name="email" required><br><br>
+	  <label for="valorBoleta">Valor de la boleta:</label>
+	  <input type="text" id="valorBoletaForm" name="valorBoleta" readonly><br><br>
+	  <button type="submit">Enviar</button>
+	  <button class="cerrar-formulario">X</button>
+	</form>
+  </div>
 <script src="index.js">
 
 </script>
