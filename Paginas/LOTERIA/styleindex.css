@@ -1,0 +1,75 @@
+*{
+	background: black;
+}
+
+.encabezado{
+	background: white;
+	width: 100%;
+	height: 20px;
+}
+.contenedor0{
+	margin: 30px 50px;
+	padding: 1%;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px darkgreen;
+	align-content: center;
+	display: inline-flex;
+	background: white;
+	height: 400px;
+	width: 300px;
+}
+
+.contenedor0:hover{
+	scale: 1.01;
+	box-shadow: 2px 8px 7px 2px darkgreen;
+}
+
+.formu0{
+	text-align: center;
+	align-content: center;
+	padding: 0%;
+	background: silver;
+	border-radius: 10px;
+	outline: solid 1px black;
+	height: 400px;
+	width: 300px;
+}
+
+.imgrif0{
+	box-shadow: 1px 1px 2px 1px black;
+	border-radius: 5px;
+	outline: solid 1px gray;
+	background: transparent;
+	height: 200px;
+	width: 240px;
+}
+
+.txtpreciorif0{
+	background: transparent;
+	color: steelblue;
+	font-family: monospace;
+	font-size: 30px;
+}
+
+.btnsx{
+	display: inline-block;
+	background: transparent;
+}
+
+.btnx {
+	padding: 1%;
+	margin: 0px 5px 2px 5px;
+	width: 80px;
+	background: limegreen;
+}
+
+.btncompra{
+	font-family: fantasy;
+	font-size: 20px;
+	box-shadow: 2px 2px 4px 2px black;
+	border-radius: 5px;
+	background: limegreen;
+	width: 100px;
+	padding: 1%;
+	margin: 20px 0px 0px 0px;
+}
