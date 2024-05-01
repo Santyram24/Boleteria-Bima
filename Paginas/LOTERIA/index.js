@@ -4,21 +4,21 @@ let presio;
 function btnx2() {
 
 	document.getElementById('txtpreciorif0').innerHTML = "3.000";
-	presio = "3000";
+	presio = "3.000";
 
 }
 
 function btnx4() {
 
 	document.getElementById('txtpreciorif0').innerHTML = "6.000";
-	presio = "6000";
+	presio = "6.000";
 
 }
 
 function btnx6() {
 
 	document.getElementById('txtpreciorif0').innerHTML = "9.000";
-	presio = "9000";
+	presio = "9.000";
 
 
 }
@@ -26,7 +26,7 @@ function btnx6() {
 function btnx8() {
 
 	document.getElementById('txtpreciorif0').innerHTML = "12.000";
-	presio = "12000";
+	presio = "12.000";
 
 
 }
@@ -34,7 +34,7 @@ function btnx8() {
 function btnx10() {
 
 	document.getElementById('txtpreciorif0').innerHTML = "15.000";
-	presio = "15000";
+	presio = "15.000";
 
 }
 
