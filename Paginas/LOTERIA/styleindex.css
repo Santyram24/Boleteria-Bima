@@ -1,12 +1,13 @@
 * {
-	background: url(multimedia/bs.png);
+	margin: 0%;
+	padding: 0%;
 }
 
 .encabezado {
 	padding: 2px;
 	border-radius: 10px;
 	display: inline-flex;
-	background: #95555559;
+	background: black;
 	width: 100%;
 	height: 100px;
 }
@@ -21,19 +22,48 @@
 	font-size: 30px;
 	margin: 40px 0px 0px 20px;
 	background: transparent;
-	color: #ab8989a3;
+	color: #b3b3b3a3;
 	font-family: monospace;
 
 }
 
 .imglogo{
+	outline: solid 2px black;
 	scale: 1.1;
 	width: 100px;
-	height: 100px;
+	height: 96px;
+}
+
+.presentacion{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	display: block;
+	background: #f3f3f3;
+	height: 600PX;
+	width: 100%;
+}
+
+.comic {
+	display: flex;
+	background-size: ;
+	height: 600PX;
+	width: 100%;
+}
+
+.rifas{
+	background: #f3f3f3;
+	width: 100%;
+}
+
+.PRIFAS {
+	margin: 5px 0px;
+	font-family: serif;
+	color: black;
 }
 
 .contenedor0 {
-	margin: 30px 50px;
+	margin: 50px 100px;
 	padding: 1%;
 	border-radius: 10px;
 	box-shadow: 1px 1px 1px 1px white;
@@ -72,7 +102,7 @@
 
 .txtpreciorif0 {
 	background: transparent;
-	color: steelblue;
+	color: blueviolet;
 	font-family: monospace;
 	font-size: 30px;
 }
@@ -94,19 +124,135 @@
 	font-size: 20px;
 	box-shadow: 2px 2px 4px 2px black;
 	border-radius: 5px;
-	background: limegreen;
+	background: #596dff8f;
 	width: 100px;
 	padding: 1%;
 	margin: 20px 0px 0px 0px;
 }
 
-.formulario {
+.legalidad{
+	background:#f3f3f3;
+	display: inline-flex;
+	height: 450px;
+	width: 100%;
+}
+
+.politicas{
+	font-family: serif;
 	text-align: center;
 	align-content: center;
-	height: 380px;
+	background: white;
+	box-shadow: 2px 2px 2px 2px black;
+	top: 100px;
+	left: 350px;
+	position: relative;
+	margin: 20px 50px ;
+	outline: solid 1px black;
+	height: 250px;
+	width: 250px;
+	margin: 10px;
+}
+
+.imgpoliticas{
+	margin: 5px 0px;
+	height: 100px;
+	width: 100px;
+}
+
+.btnpoliticas {
+	border-radius: 10px;
+	margin: 20px 0px;
+	background: #596dff8f;
+	height: 30px;
+	width: 80px;
+}
+
+.legal{
+	font-family: serif;
+	text-align: center;
+	align-content: center;
+	background: white;
+	box-shadow: 2px 2px 2px 2px black;
+	top: 100px;
+	left: 500px;
+	position: relative;
+	margin: 20px 50px ;
+	outline: solid 1px black;
+	height: 250px;
+	width: 250px;
+	margin: 10px;
+}
+
+.imglegal{
+	margin: 5px 0px;
+	height: 100px;
+	width: 100px;
+}
+
+.btnlegal {
+	border-radius: 10px;
+	margin: 20px 0px;
+	background: #596dff8f;
+	height: 30px;
+	width: 80px;
+}
+
+.foter{
+	display: flex;
+	outline: solid 1px black;
+	background: transparent;
+	height: 200px;
+	width: 100%;
+}
+
+.foter1{
+	font-family: serif;
+	text-align: center;
+	align-content: center;
+	width: 50%;
+	height: 200px;
+	background: transparent;
+}
+
+.foter2{
+	font-family: serif;
+	text-align: center;
+	align-content: center;
+	width: 50%;
+	height: 200px;
+	background: transparent;
+}
+
+.f0{
+	margin: 10px 0px;
+}
+
+.imgdesaroollador {
+	height: 100px;
+	width: 100px;
+}
+
+.copy{
+	text-align: center;
+	font-family: serif;
+}
+
+.formulario {
+	display: inline-flex;
+	text-align: center;
+	align-content: center;
+	height: 200px;
 	padding: 2%;
 	outline: solid 0.2px black;
 	background: white;
+}
+
+.seccion1 {
+	width: 312px;
+}
+
+.seccion2 {
+	width: 312px;
 }
 
 label {
@@ -130,8 +276,8 @@ input {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	height: 400px;
-	width: 250px;
+	height: 230px;
+	width: 650px;
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 2px 2px 2px 2px darkgreen;
@@ -158,6 +304,7 @@ input {
 	border-radius: 5px;
 	background: red;
 	position: absolute;
+	width: 30px;
 	top: 10px;
 	right: 10px;
 	font-size: 18px;
@@ -165,8 +312,11 @@ input {
   }
 
   .btnenviar {
+  	color: black;
   	padding: 2%;
   	box-shadow: 1px 1px 2px 1px grey;
-  	background: darkgreen;
+  	background: #596dff8f;
   	border-radius: 5px;
   }
+
+
