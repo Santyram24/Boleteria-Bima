@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styleindex.css">
     <title>Loteria</title>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
     <script type="text/javascript">
         emailjs.init('fDu6wYnXJwa6mupV7')
     </script>
 </head>
-
 <body>
     <header class="encabezado">
         <content class="logo">
@@ -36,7 +33,6 @@
                     <button onclick="btnx6()" id="btnx6" class="btnx">X6</button>
                     <button onclick="btnx9()" id="btnx9" class="btnx">X9</button>
                     <button onclick="btnx12()" id="btnx12" class="btnx">X12</button>
-
                 </div>
                 <button onclick="comprarBoleta()" id="comprar-btn" class="btncompra">Comprar</button>
             </content>
@@ -68,11 +64,9 @@
     <p class="copy">° www.bimasolutions.com</p>
 
     <p class="boletas-disponibles">Boletas disponibles: <span id="boletas-disponibles-count">100</span></p>
-	<button onclick="enviarTodosNumeros()" id="enviar-todos-numeros" class="btnenviar-todos-numeros">Enviar todos los números</button>
-
+    <button onclick="enviarTodosNumeros()" id="enviar-todos-numeros" class="btnenviar-todos-numeros">Enviar todos los números</button>
 
     <div id="contenedorFormulario" class="contenedor-formulario" style="display: none;">
-
         <form id="formulario" class="formulario">
             <div class="seccion1">
                 <label for="from_name">Nombre:</label>
@@ -99,11 +93,7 @@
                 <button class="cerrar-formulario">X</button>
             </div>
         </form>
-
     </div>
-    <script src="index.js">
-
-    </script>
+    <script src="index.js"></script>
 </body>
-
 </html>

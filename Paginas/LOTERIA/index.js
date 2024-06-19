@@ -70,9 +70,8 @@ function enviarCorreo(email, numerosRifa, valorBoleta) {
     btn.value = 'Enviando...';
 
     const serviceID = 'service_ucm4y6c';
-    const templateID = 'template_ipuqp4h'; // Reemplaza 'template_id' con el ID de tu plantilla en EmailJS
+    const templateID = 'template_ipuqp4h';
 
-    // Plantilla de correo para el usuario
     const templateParamsUsuario = {
         to_email: email,
         from_name: document.getElementById('from_name').value,
@@ -81,28 +80,25 @@ function enviarCorreo(email, numerosRifa, valorBoleta) {
         valorBoleta: valorBoleta
     };
 
-    // Plantilla de correo para el administrador
     const templateParamsAdmin = {
-        to_email: 'jubeb.b.23@gmail.com', // Tu correo personal
+        to_email: 'jubeb.b.23@gmail.com',
         from_name: document.getElementById('from_name').value,
         email_id: document.getElementById('email_id').value,
-        numerosRifa: numerosRifa.join(',    '),
+        numerosRifa: numerosRifa.join(', '),
         valorBoleta: valorBoleta
     };
 
-    // Enviar correo al usuario
     emailjs.send(serviceID, templateID, templateParamsUsuario)
         .then(function (response) {
             console.log('Correo enviado al usuario con éxito:', response);
             btn.value = 'Enviar';
-            alert('¡Gracias por tu compra Revisa tu correo electrónico.');
+            alert('¡Gracias por tu compra! Revisa tu correo electrónico.');
         }, function (error) {
             console.error('Error al enviar el correo al usuario:', error);
             btn.value = 'Enviar';
             alert('Hubo un error al enviar el correo. Por favor, inténtalo de nuevo.');
         });
 
-    // Enviar correo al administrador
     emailjs.send(serviceID, templateID, templateParamsAdmin)
         .then(function (response) {
             console.log('Correo enviado al administrador con éxito:', response);
@@ -113,13 +109,29 @@ function enviarCorreo(email, numerosRifa, valorBoleta) {
 
 document.getElementById('formulario').addEventListener('submit', function (event) {
     event.preventDefault();
-    const email = document.getElementById('email_id').value; // Obtener el correo electrónico del formulario
+
+    const email = document.getElementById('email_id').value;
     const numerosRifa = generarNumerosRifa(canti);
     const valorBoleta = presio;
 
-    enviarCorreo(email, numerosRifa, valorBoleta); // Enviar correo al correo ingresado por la persona y al administrador
+    fetch('guardar_boleta.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+            email: email,
+            numerosRifa: JSON.stringify(numerosRifa),
+            valorBoleta: valorBoleta
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            enviarCorreo(email, data.numerosRifa, valorBoleta);
+        } else {
+            console.error('Error al guardar los datos:', data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Error al guardar los datos:', error);
+    });
 });
-
-if (cantidadBoletas <= 0) {
-    alert('No hay boletas disponibles');
-}
